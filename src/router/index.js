@@ -1,9 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Dashboard from "../components/Dashboard";
-import Profile from "../components/Profile";
-import Charts from "../components/Charts";
-import Notifications from "../components/Notifications";
+import Dashboard from "../views/Dashboard";
+import Profile from "../views/Profile";
+import Charts from "../views/Charts";
+import Notifications from "../views/Notifications";
 
 Vue.use(Router);
 
@@ -36,7 +36,10 @@ let router = new Router({
             path: "/notifications",
             name: "Notifications",
             component: Notifications,
-        }
+        },
+        {
+            path: '*',
+            redirect: '/' }
     ],
 });
 export default router;
