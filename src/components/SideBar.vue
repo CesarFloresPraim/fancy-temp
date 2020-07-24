@@ -6,31 +6,43 @@
                         src="../assets/logo.png" alt="logo" height="60" width="60"/>CesarFloresPraim
                 </b-list-group-item>
                 <hr class="separator">
+
                 <b-list-group>
-                    <b-list-group-item v-on:click="colour(0)"
-                                       v-bind:class="[arrTabs[0]? 'selectedTab':'bg-transparent']"
-                                       class="rounded border-0 text-white" href="#some-link">
-                        <b-icon icon="columns" class="mr-2"></b-icon>
-                        Dashboard
-                    </b-list-group-item>
-                    <b-list-group-item v-on:click="colour(1)"
-                                       v-bind:class="[arrTabs[1]? 'selectedTab':'bg-transparent']"
-                                       class="rounded border-0 text-white" href="#">
-                        <b-icon icon="person-fill" class="mr-2"></b-icon>
-                        User Profile
-                    </b-list-group-item>
-                    <b-list-group-item v-on:click="colour(2)"
-                                       v-bind:class="[arrTabs[2]? 'selectedTab':'bg-transparent']"
-                                       class="rounded border-0 text-white" href="#">
-                        <b-icon icon="graph-up" class="mr-2"></b-icon>
-                        Charts
-                    </b-list-group-item>
-                    <b-list-group-item v-on:click="colour(3)"
-                                       v-bind:class="[arrTabs[3]? 'selectedTab':'bg-transparent']"
-                                       class="rounded border-0 text-white" href="#foobar">
-                        <b-icon icon="envelope-fill" class="mr-2"></b-icon>
-                        Notifications
-                    </b-list-group-item>
+                    <router-link to="/dashboard">
+                        <b-list-group-item v-on:click="colour(0)"
+                                           v-bind:class="[arrTabs[0]? 'selectedTab':'bg-transparent']"
+                                           class="rounded border-0 text-white">
+                            <b-icon icon="columns" class="mr-2"></b-icon>
+                            Dashboard
+                        </b-list-group-item>
+                    </router-link>
+                    <router-link to="/profile">
+                        <b-list-group-item v-on:click="colour(1)"
+                                           v-bind:class="[arrTabs[1]? 'selectedTab':'bg-transparent']"
+                                           class="rounded border-0 text-white">
+
+                            <b-icon icon="person-fill" class="mr-2"></b-icon>
+                            User Profile
+                        </b-list-group-item>
+
+                    </router-link>
+                    <router-link to="/charts">
+                        <b-list-group-item v-on:click="colour(2)"
+                                           v-bind:class="[arrTabs[2]? 'selectedTab':'bg-transparent']"
+                                           class="rounded border-0 text-white">
+                            <b-icon icon="graph-up" class="mr-2"></b-icon>
+                            Charts
+
+                        </b-list-group-item>
+                    </router-link>
+                    <router-link to="/notifications">
+                        <b-list-group-item v-on:click="colour(3)"
+                                           v-bind:class="[arrTabs[3]? 'selectedTab':'bg-transparent']"
+                                           class="rounded border-0 text-white">
+                            <b-icon icon="envelope-fill" class="mr-2"></b-icon>
+                            Notifications
+                        </b-list-group-item>
+                    </router-link>
                 </b-list-group>
             </div>
         </div>

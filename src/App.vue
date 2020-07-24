@@ -5,7 +5,7 @@
                 <SideBar :disp="disp" />
                 <b-col v-bind:class="[disp ? 'col-10' : 'col-12']" class="bg-light">
                     <b-icon v-on:click="changeSidebarProp" icon="list" font-scale="2"></b-icon>
-                    <p>Amo a mi novia, consectetur adipisicing elit. Ab architecto consectetur cumque dignissimos eveniet id illo illum incidunt itaque, laudantium magnam minima nobis non qui quibusdam voluptatibus voluptatum. Dolores, eius.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid culpa dolorem eos et exercitationem fugiat perspiciatis praesentium quam quia quos repellendus reprehenderit saepe sequi tempora, temporibus voluptate voluptatibus?</p>
+                    <router-view :key="$route.fullPath"/>
                 </b-col>
             </b-row>
         </b-container>
