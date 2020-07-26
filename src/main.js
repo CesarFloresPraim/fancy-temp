@@ -7,8 +7,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 //Components
-import { SidebarPlugin } from 'bootstrap-vue'
-Vue.use(SidebarPlugin)
+import VueCharts from "vue-chartjs";
+Vue.use(VueCharts)
 
 Vue.config.productionTip = false
 // Install BootstrapVue
