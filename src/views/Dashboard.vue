@@ -15,16 +15,28 @@
             </b-col>
         </b-row>
         <b-row>
-            <b-col sm="12" md="6" lg="8" class="mb-5">
-                <TableCard color="rgba(240, 147, 43,1.0)"></TableCard>
-            </b-col>
             <b-col sm="12" md="6" lg="4" class="mb-5">
                 <CardChart color="rgba(34, 166, 179,1.0)" title="Website views"
                            info="Increase in website visits from last month"
-                           updated-on="updated 4 minutes ago"></CardChart>
+                           updated-on="updated 4 minutes ago" type="line"></CardChart>
             </b-col>
-
+            <b-col sm="12" md="6" lg="4" class="mb-5">
+                <CardChart color="rgba(239, 87, 119,1.0)" title="Website views"
+                           info="Increase in website visits from last month"
+                           updated-on="updated 4 minutes ago" type="bar"></CardChart>
+            </b-col>
         </b-row>
+        <b-row>
+            <b-col sm="12" class="mb-5">
+                <TableCard title="Persons Table" color="rgba(240, 147, 43,1.0)" table-id="table-1"></TableCard>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col sm="12" class="mb-5">
+                <TableCard title="Persons 2 Table" color="rgba(240, 147, 43,1.0)" table-id="table-0"></TableCard>
+            </b-col>
+        </b-row>
+
     </b-container>
 </template>
 

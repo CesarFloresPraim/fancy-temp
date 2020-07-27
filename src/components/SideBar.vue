@@ -72,5 +72,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .selectedTab {
+        background-color: #009432 !important;
+    }
 </style>

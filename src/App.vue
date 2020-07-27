@@ -3,9 +3,8 @@
         <b-container fluid style="height: 100%">
             <b-row style="height: 100%">
                 <SideBar :disp="disp" />
-                <b-col v-bind:class="[disp ? 'col-10' : 'col-12']" class="bg-light">
+                <b-col v-bind:class="[disp ? 'col-10' : 'col-12']" style="overflow-y: scroll; max-height: 100%" class="bg-light">
                     <div class="p-1 mt-2 mb-2 shadow rounded-circle buttonMenu"><b-icon v-on:click="changeSidebarProp" icon="three-dots-vertical" font-scale="1.5"></b-icon></div>
-
                     <router-view :key="$route.fullPath"/>
                 </b-col>
             </b-row>
@@ -58,10 +57,6 @@
         background: rgb(51,48,48);
         background: radial-gradient(circle, rgba(51,48,48,.7) 0%, rgba(10,10,10,.7) 100%, rgba(162,162,182,.7) 100%);
         height: 100%;
-    }
-
-    .selectedTab {
-        background-color: #009432 !important;
     }
 
     .separator {

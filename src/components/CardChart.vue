@@ -5,7 +5,8 @@
                 <div class="card upCard text-center p-2 shadow mb-2"
                      v-bind:style="{minWidth: '90%', backgroundColor: color}">
                     <div class="card-body p-0 text-white">
-                        <line-chart class="fitParent"></line-chart>
+                        <line-chart v-if="type==='line'" class="fitParent"></line-chart>
+                        <bar-chart v-else-if="type==='bar'" class="fitParent"></bar-chart>
                     </div>
                 </div>
             </div>
@@ -23,6 +24,7 @@
 
 <script>
     import LineChart from "./LineChart";
+    import BarChart from "./BarChart";
 
     export default {
         name: "CardChart",
@@ -30,10 +32,12 @@
             color: String,
             title: String,
             info: String,
-            updatedOn: String
+            updatedOn: String,
+            type: String
         },
         components: {
-            LineChart
+            LineChart,
+            BarChart
         }
     }
 </script>
